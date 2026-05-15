@@ -1,0 +1,16 @@
+{
+  "name": "pandacss-svelte5-snippet-extraction-regression",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "codegen": "panda codegen",
+    "cssgen": "panda cssgen --outfile dist.css",
+    "report": "bash scripts/report.sh",
+    "repro:broken": "pnpm add -D @pandacss/dev@1.11.1 && pnpm codegen && pnpm cssgen",
+    "repro:works": "pnpm add -D @pandacss/dev@1.10.0 && pnpm codegen && pnpm cssgen"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "1.11.0"
+  }
+}
